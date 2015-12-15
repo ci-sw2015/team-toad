@@ -28,8 +28,7 @@ public class MovablePiece implements Grid {
 
     public boolean outsideBoard(int boardRows) {
         for (Point loc : Grids.allPointsOf(this)) {
-            if (piece.cellAt(loc) != EMPTY) {
-                if (asAbs(loc).row >= boardRows) {
+            if (piece.cellAt(loc) != EMPTY && asAbs(loc).row >= boardRows) {
                     return true;
                 }
             }
