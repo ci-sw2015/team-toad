@@ -30,7 +30,6 @@ public class MovablePiece implements Grid {
         for (Point loc : Grids.allPointsOf(this)) {
             if (piece.cellAt(loc) != EMPTY && asAbs(loc).row >= boardRows) {
                     return true;
-                }
             }
         }
         return false;
